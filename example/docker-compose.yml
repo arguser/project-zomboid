@@ -1,0 +1,19 @@
+version: "3.0"
+
+services:
+  web3:
+    image: arguser/project-zomboid:latest
+    restart: unless-stopped
+    cap_add:
+      - sys_nice
+    env_file:
+      - ./pz.env
+    ports:
+      - "8766:8766/udp"
+      - "8767:8767/udp"
+      - "16261:16261/udp"
+      - "16262-16272:16262-16272"
+      - "27015:27015"
+    volumes:
+      - ./server-data:/server-data
+      - ./server-files:/server-files

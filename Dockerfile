@@ -1,4 +1,4 @@
-FROM ghcr.io/cyrale/linuxgsm:0.2.1
+FROM arguser/linuxgsm
 
 # Steam ports
 ENV STEAM_PORT_1=8766  \
